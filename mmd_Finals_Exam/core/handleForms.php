@@ -85,8 +85,7 @@
         header('Location: ../index.php');
     }
 
-
-    // suspend
+    // suspend user
     if (isset($_POST['changeStatusReq'])) {
         $userId = sanitizeInput($_POST['userId']);
         $accountStatus = sanitizeInput($_POST['status']);
@@ -100,6 +99,7 @@
         }
     }
 
+    // seach users
     if (isset($_POST['searchReq'])) {
 
         $searchQuery = sanitizeInput($_POST['username']);
@@ -139,6 +139,7 @@
     }
 
 
+    // save changes in document
     if (isset($_POST['saveReq'])) {
         $content = $_POST['content'];
         $docId = sanitizeInput($_POST['docId']);
@@ -168,6 +169,7 @@
     }
 
 
+    // share document
     if (isset($_POST['shareReq'])) {
         $docId = sanitizeInput($_POST['docId']);
         $collaboratorId = $_POST['collaboratorId'];
@@ -186,6 +188,7 @@
         }
     }
 
+
     // change title
     if (isset($_POST['changeTitleReq'])) {
 
@@ -200,6 +203,7 @@
             echo "Error changing title";
         }
     }
+
 
     // delete document
     if (isset($_POST['deleteReq'])) {
@@ -216,7 +220,9 @@
     }
 
 
+
     /* --- MESSAGES --- */
+    // send message
     if (isset($_POST['messageReq'])) {
 
         $message = sanitizeInput($_POST['message']);
