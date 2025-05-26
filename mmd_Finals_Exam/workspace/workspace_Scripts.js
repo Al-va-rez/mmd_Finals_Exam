@@ -93,6 +93,9 @@
                 event.preventDefault();
 
                 $('#messageInterface').show();
+                
+                // always be at the bottom of the messages window (to view most recent messages)
+                $('#messages').scrollTop($('#messages')[0].scrollHeight);
             }
         )
     // open interfaces
@@ -223,8 +226,7 @@
     
 // messaging feature
 
-    // always be at the bottom of the messages window (to view most recent messages)
-    $('#messages').scrollTop($('#messages')[0].scrollHeight);
+    
 
     
     // sending messages
