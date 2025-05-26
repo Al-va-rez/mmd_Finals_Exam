@@ -93,7 +93,7 @@
                 event.preventDefault();
 
                 $('#messageInterface').show();
-                
+
                 // always be at the bottom of the messages window (to view most recent messages)
                 $('#messages').scrollTop($('#messages')[0].scrollHeight);
             }
@@ -224,12 +224,8 @@
 
 
     
-// messaging feature
+// send messages
 
-    
-
-    
-    // sending messages
     $('#formMessage').on('submit',
         function(event) {
             event.preventDefault();
@@ -255,4 +251,4 @@
         }
     );
 
-// messaging feature
+// send messages
